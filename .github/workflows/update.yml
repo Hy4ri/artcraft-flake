@@ -1,0 +1,122 @@
+# NOTE: this comment-tweak exists to trigger GitHub Actions workflow discovery
+# on the initial main branch. Safe to drop in future edits.
+name: Update Package
+
+on:
+  schedule:
+    # Daily at 17:00 UTC — adjust to your upstream's release cadence
+    # (the fleet uses: daily 12:00/17:00, or every 6h for fast movers).
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      fail_reason: ${{ steps.build_verify.outputs.fail_reason || steps.check.outputs.fail_reason }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      # ── Project-specific: only this script changes between repos ──
+      - name: Check for updates
+        id: check
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          chmod +x ./scripts/check-update.sh
+          ./scripts/check-update.sh
+
+      - name: Update version
+        if: steps.check.outputs.update_needed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          chmod +x ./update-version.sh
+          ./update-version.sh "${{ steps.check.outputs.version }}"
+
+      - name: Update flake.lock
+        if: steps.check.outputs.update_needed == 'true'
+        run: nix flake update
+
+      # Never auto-commit a broken flake: verify before pushing.
+      - name: Verify Builds
+        id: build_verify
+        if: steps.check.outputs.update_needed == 'true'
+        continue-on-error: true
+        run: |
+          BUILD_LOG="$(mktemp)"
+          echo "Building package to verify update..."
+          nix flake check --no-build
+          if ! nix build .#default --no-link 2>&1 | tee "$BUILD_LOG"; then
+            ERR_MSG="Package build failed after version update. Log snippet: $(tail -n 20 "$BUILD_LOG")"
+            echo "fail_reason=$ERR_MSG" | tr '\n\r' '  ' >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.update_needed == 'true' && steps.build_verify.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: update to ${{ steps.check.outputs.version }}" || exit 0
+          git push
+
+      # ── Shared: auto-close the failure issue once we recover ─────
+      # NOTE: not `if: success()` — a continue-on-error check failure still
+      # evaluates success() as true, which would close the open failure
+      # issue on a still-failing run. Gate on the check outcome explicitly.
+      - name: Close resolved failure issues
+        if: steps.check.outcome == 'success' && (steps.build_verify.outcome == 'success' || steps.check.outputs.update_needed != 'true')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          LABEL="auto-failure"
+          gh label create "$LABEL" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+          OPEN=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$LABEL" --state open --json number --jq '.[].number')
+          for n in $OPEN; do
+            echo "Closing auto-failure issue #$n (workflow succeeded again)"
+            gh issue close "$n" --repo "$GITHUB_REPOSITORY" --comment "The update workflow succeeded again — closing automatically."
+          done
+
+      # continue-on-error above would let the job pass; fail the run when check or build failed.
+      - name: Fail the run
+        if: steps.check.outcome == 'failure' || steps.build_verify.outcome == 'failure'
+        run: exit 1
+
+  # ── Shared: auto-open a deduped issue when the workflow fails ────
+  report-failure:
+    runs-on: ubuntu-latest
+    needs: update
+    if: failure()
+    permissions:
+      issues: write
+    steps:
+      - name: Open failure issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          LABEL="auto-failure"
+          gh label create "$LABEL" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+
+          REASON="${{ needs.update.outputs.fail_reason }}"
+          [ -n "$REASON" ] || REASON="See the failed run logs for details."
+
+          TITLE="[auto] Update workflow failed"
+          BODY=$(printf 'The **Update Package** workflow failed on %s.\n\n- Run: %s/%s/actions/runs/%s\n- Job: update\n\n**Failure reason:** %s\n\n_This issue was created automatically. It will be closed automatically when the workflow succeeds again._\n' "$(date -u +'%Y-%m-%d %H:%M UTC')" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" "$REASON")
+
+          EXISTING=$(gh issue list --repo "$GITHUB_REPOSITORY" --label "$LABEL" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Failure issue #$EXISTING already open — adding comment instead."
+            gh issue comment "$EXISTING" --repo "$GITHUB_REPOSITORY" --body "Still failing on run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID — $REASON"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --label "$LABEL" --body "$BODY"
+          fi

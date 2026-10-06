@@ -1,0 +1,51 @@
+{
+  "designcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-K08xkWEJJ5jqZTpdRT0mh3Wz/xxhasCzz4iFX5PtqUw=",
+      "x86_64-linux": "sha256-YClqomqJk82jLPNzB3cTsz10BGF0ze7i+myslKSba90="
+    },
+    "version": "0.2.0"
+  },
+  "effectcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-vHKJ7KjAmKVHJrPiMgczlzw1lzD7BSCv8pBwTAu0I/o=",
+      "x86_64-linux": "sha256-Isvx+aORBpgIBZf0gBr1pMCIEkYPrdEJa9pVuD2+8JM="
+    },
+    "version": "0.3.0"
+  },
+  "filmcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-/xuXbPkCWmSMnZ626VOL2DSvgGh8qNuyNT5fBXKeLvs=",
+      "x86_64-linux": "sha256-NXQ9BI/NlCof42uMlfCvezzn1VdzJa+r+uEIMXXSL6U="
+    },
+    "version": "0.2.0"
+  },
+  "lightcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-5w9QB9LVrNXt9/PIqVNykBQgNsv2KsuKcTaVqbGIWrE=",
+      "x86_64-linux": "sha256-8DZiDsSigyO/udXwIZWp6H3hOh2sknAbnjRZ6yhkRh8="
+    },
+    "version": "0.2.0"
+  },
+  "photocraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-An4Z3dNYHR7C4gV9Zt9RsqFPanNU1O+NA+SHNa9gxw4=",
+      "x86_64-linux": "sha256-LVWu2WhBhEf1FKyH5qPx6z34hfDjtGvATlQSL1LHdDA="
+    },
+    "version": "0.2.0"
+  },
+  "printcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-dep5xb4JQq5d5+lQGGc1gLpvyv6Lpzxd9HYeFtttnko=",
+      "x86_64-linux": "sha256-UK1Ut++85wrz4fzCPnKCBCAd+eM6leNdTy1Dl4AZktM="
+    },
+    "version": "0.2.0"
+  },
+  "vectorcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-hbyK13NZeczppRFEhKQFYeHDdD3bGQFGO0qyBz1wkR4=",
+      "x86_64-linux": "sha256-DI0AiQGGHO5bSTVJy8V+ytrkWTdO10j1A23fMzfAaDU="
+    },
+    "version": "0.3.0"
+  }
+}

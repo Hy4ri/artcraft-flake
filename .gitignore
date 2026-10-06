@@ -1,0 +1,9 @@
+# Nix build output
+result
+result-*
+
+# direnv
+.direnv/
+
+# Local nix caches / state
+.envrc
