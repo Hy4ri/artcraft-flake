@@ -1,5 +1,5 @@
 {
-  description = "ArtCraft Crafting Apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PrintCraft, EffectCraft, DesignCraft) — one flake, one overlay";
+  description = "ArtCraft Crafting Apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft) — one flake, one overlay";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -14,7 +14,9 @@
 
       overlay = final: _prev:
         nixpkgs.lib.genAttrs appNames (name:
-          final.callPackage ./package.nix { inherit name; info = versions.${name}; });
+          final.callPackage ./package.nix { inherit name; info = versions.${name}; })
+        # Upstream renamed PrintCraft -> PdfCraft; keep the old attr working.
+        // { printcraft = final.pdfcraft; };
     in
     {
       overlays.default = overlay;
