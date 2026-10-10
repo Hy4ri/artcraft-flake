@@ -1,5 +1,5 @@
 {
-  description = "ArtCraft Crafting Apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft) — one flake, one overlay";
+  description = "A Nix flake for packaging ArtCraft applications";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -9,13 +9,16 @@
     let
       systems = [ "x86_64-linux" "aarch64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
+      
+      # Read the exact versions and hashes from version.json
       versions = builtins.fromJSON (builtins.readFile ./version.json);
       appNames = builtins.attrNames versions;
 
       overlay = final: _prev:
         nixpkgs.lib.genAttrs appNames (name:
-          final.callPackage ./package.nix { inherit name; info = versions.${name}; })
-        # Upstream renamed PrintCraft -> PdfCraft; keep the old attr working.
+          final.callPackage ./package.nix { inherit name; info = versions.${name}; }
+        )
+        # Compatibility alias for the renamed PrintCraft app
         // { printcraft = final.pdfcraft; };
     in
     {
@@ -27,7 +30,7 @@
           apps = nixpkgs.lib.genAttrs appNames (n: pkgs.${n});
         in
         apps // {
-          # `nix build` / `nix profile install` with no name = every app.
+          # Default package builds and links all ArtCraft applications together
           default = pkgs.symlinkJoin {
             name = "artcraft-apps";
             paths = builtins.attrValues apps;
