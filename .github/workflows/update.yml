@@ -4,9 +4,8 @@ name: Update Package
 
 on:
   schedule:
-    # Daily at 17:00 UTC — adjust to your upstream's release cadence
-    # (the fleet uses: daily 12:00/17:00, or every 6h for fast movers).
-    - cron: '0 17 * * *'
+    # Every 6 hours (00:00, 06:00, 12:00, 18:00 UTC) — 4 runs a day
+    - cron: '0 */6 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
