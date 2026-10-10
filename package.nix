@@ -4,16 +4,15 @@
 , info
 }:
 
-# One generic derivation for every Crafting App.
-# Upstream ships a relocatable tar.gz (bin/, share/applications, icons,
-# metainfo) per arch — the cleanest Linux format, no FUSE/dpkg needed.
-# version.json holds { <app>: { version, hashes.<system> } } and is kept
-# current by update-version.sh.
+# Generic derivation for building ArtCraft applications.
+# Fetches pre-compiled Linux binaries from GitHub releases to avoid long Rust compilation times,
+# and uses autoPatchelfHook to ensure they run correctly on NixOS.
 
 let
   system = stdenv.hostPlatform.system;
   arch = { x86_64-linux = "x86_64"; aarch64-linux = "aarch64"; }.${system};
 
+  # Dependencies needed at runtime by the pre-compiled binaries
   runtimeLibs = [ alsa-lib dbus libGL libxkbcommon libx11 libxcb libxcursor libxi vulkan-loader wayland ];
 in
 stdenv.mkDerivation {
@@ -26,16 +25,21 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ autoPatchelfHook ];
+
+  # C/C++ and Alsa libs required for linking
   buildInputs = [ stdenv.cc.cc.lib alsa-lib ];
 
   installPhase = ''
     runHook preInstall
+
     mkdir -p $out
+    # The upstream tarball contains bin/ and share/ with the application files
     cp -r bin share $out/
+
     runHook postInstall
   '';
 
-  # dlopen()ed at runtime: autoPatchelfHook adds these to every ELF's rpath.
+  # dlopen()ed at runtime: autoPatchelfHook adds these to every ELF's rpath
   runtimeDependencies = runtimeLibs;
 
   meta = {

@@ -7,3 +7,4 @@ result-*
 
 # Local nix caches / state
 .envrc
+.idea/
