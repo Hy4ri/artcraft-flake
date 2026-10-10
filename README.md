@@ -21,6 +21,7 @@ Overlay (NixOS / home-manager):
 
 ## Updates
 
-`version.json` maps `app -> { version, hashes.<system> }`. `update-version.sh` re-syncs all apps from each release's `SHA256SUMS.txt`
+`version.json` maps `app -> { version, hashes.<system> }`. `scripts/check-update.sh` compares every app with its
+latest GitHub release; `update-version.sh` re-syncs all apps from each release's `SHA256SUMS.txt`
 (no archive downloads). The daily workflow builds before pushing and opens a deduped issue on failure.
 Adding an app = add its key to `version.json` and run `./update-version.sh`.

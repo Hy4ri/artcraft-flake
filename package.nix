@@ -25,25 +25,25 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ autoPatchelfHook ];
-  
+
   # C/C++ and Alsa libs required for linking
   buildInputs = [ stdenv.cc.cc.lib alsa-lib ];
 
   installPhase = ''
     runHook preInstall
-    
+
     mkdir -p $out
     # The upstream tarball contains bin/ and share/ with the application files
     cp -r bin share $out/
-    
+
     runHook postInstall
   '';
 
-  # Appended to the RPATH of ELF binaries by autoPatchelfHook
+  # dlopen()ed at runtime: autoPatchelfHook adds these to every ELF's rpath
   runtimeDependencies = runtimeLibs;
 
   meta = {
-    description = "An open-source native creative app written in Rust, developed by the ArtCraft team";
+    description = "ArtCraft ${name}: open-source native creative app written in Rust";
     homepage = "https://getartcraft.com/apps/${name}";
     license = with lib.licenses; [ asl20 mit ];
     platforms = [ "x86_64-linux" "aarch64-linux" ];
