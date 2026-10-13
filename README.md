@@ -1,7 +1,7 @@
 # artcraft-flake
 
 One flake for all [ArtCraft Crafting Apps](https://getartcraft.com/apps) (open-source, native Rust):
-`photocraft` `vectorcraft` `filmcraft` `lightcraft` `pdfcraft` `effectcraft` `designcraft` `cadcraft` `deckcraft` `gridcraft` `soundcraft` `wordcraft`.
+`photocraft` `vectorcraft` `filmcraft` `lightcraft` `pdfcraft` `effectcraft` `designcraft` `cadcraft` `deckcraft` `gridcraft` `soundcraft` `wordcraft` `figcraft`.
 
 Each is packaged from upstream's relocatable `linux-<arch>.tar.gz` release (smaller and cleaner than
 AppImage/deb/rpm, no FUSE or dpkg needed) and patched with `autoPatchelfHook`. Every package ships the GUI
