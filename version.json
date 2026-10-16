@@ -78,10 +78,10 @@
   },
   "vectorcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-/VlElOLxSYy32rAaOhCnDsjuaejdJqjtRoIZoPQZK1M=",
-      "x86_64-linux": "sha256-g8pipFW7sdHGHGsFEzvEHO2h0dmeS+dQnSh8Nkzrjzk="
+      "aarch64-linux": "sha256-8eelwA68g9hCvFfcs115Ff7bCZZYXKLyep4esqaVa+g=",
+      "x86_64-linux": "sha256-Z1DbEJ06JTxRyCl1r2UPQjhLonp2j3JSlDHt+1hQgmk="
     },
-    "version": "0.11.0"
+    "version": "0.12.0"
   },
   "wordcraft": {
     "hashes": {
