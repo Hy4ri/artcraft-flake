@@ -15,10 +15,10 @@
   },
   "designcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-i6KTrnjXbZkGhP5Ac4Lh+Ei9BrkfZZF1k6CJEdfILeE=",
-      "x86_64-linux": "sha256-nFeICInWtcOZxFC1Mhumw3yeVOWKwIFh14V6ERXYl1U="
+      "aarch64-linux": "sha256-ojL/zYnIQL3Mz8SRHvpDpiEcJtOaNBqRwHUJNZdDm9Q=",
+      "x86_64-linux": "sha256-SjcI+oeNr1GIqiumb9fNGGvzhpCmwVJG7IPYU+De65Q="
     },
-    "version": "0.9.0"
+    "version": "0.10.0"
   },
   "effectcraft": {
     "hashes": {
@@ -43,10 +43,10 @@
   },
   "gridcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-DUyIKs3P1LVyGm3R7HTJjOD7Fg0CMZc6aUddpuyejn0=",
-      "x86_64-linux": "sha256-SgKeINqGutRnBjOc5FFqIERcExwNgvahFHciCMXYMbM="
+      "aarch64-linux": "sha256-Hb2NbAU/nBTScDhzgJq22C1w+cXvIULQRnM9zj7VqiQ=",
+      "x86_64-linux": "sha256-gRSC8uS7ZvjDXVm3nlMuHQgS02K6wk5j/W3cCETWa8k="
     },
-    "version": "0.8.0"
+    "version": "0.9.0"
   },
   "lightcraft": {
     "hashes": {
@@ -71,10 +71,10 @@
   },
   "soundcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-YR+EdO8EA9cd/UEVHXoDYxZsPrlwmZ+ZP/7QxYKnNPg=",
-      "x86_64-linux": "sha256-V6K4d21RiAzuaRGFaKOWwJ+sppSdy/UPGYedcdWW9cw="
+      "aarch64-linux": "sha256-/F+8q7bMv6nhPWRZEzKvaTkkKinMYtvFUdAgVKpxL4g=",
+      "x86_64-linux": "sha256-RkGNVv782s0obmppb7Uj9X9UXV8UHEb8crpzc4trbHA="
     },
-    "version": "0.8.0"
+    "version": "0.10.0"
   },
   "vectorcraft": {
     "hashes": {
