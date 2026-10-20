@@ -29,10 +29,10 @@
   },
   "figcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-pwg4uS/TAjUTuH+GZ+QvitysY0TwHGjTOU1osdeRYDk=",
-      "x86_64-linux": "sha256-8932GU0rvVI80xld+Q+izVeC05Rvx4M7f2v4j9o3kI0="
+      "aarch64-linux": "sha256-O4ZHKrUTLPLdToyhblzbkpRuM9KHcb/Hxipu7GOOK78=",
+      "x86_64-linux": "sha256-w1DcWufjDIWgY1epTP32BPKybzpOtje0Tw94v/fDSYU="
     },
-    "version": "0.7.0"
+    "version": "0.8.0"
   },
   "filmcraft": {
     "hashes": {
@@ -64,10 +64,10 @@
   },
   "photocraft": {
     "hashes": {
-      "aarch64-linux": "sha256-gpeA0zHmRD3fG62pMu0H4OncVBshOydfPDoyCWB7x8c=",
-      "x86_64-linux": "sha256-xdRVeF2cLq9pW/jmMnxNbSOjnduVamEU8MW2Qyb5hOE="
+      "aarch64-linux": "sha256-35l+A6p1Ev48pCwqiRCLtaTtK+z1lAI9SGqO+fCZOZw=",
+      "x86_64-linux": "sha256-DhSZtJm4vYCpY44xXA8ckn0GBqxc1Yv72kNPUCXICkk="
     },
-    "version": "0.10.0"
+    "version": "0.11.1"
   },
   "soundcraft": {
     "hashes": {
