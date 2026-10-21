@@ -40,7 +40,7 @@ stdenv.mkDerivation {
   '';
 
   # dlopen()ed at runtime: autoPatchelfHook adds these to every ELF's rpath
-  runtimeDependencies = runtimeLibs;
+  runtimeDependencies = map lib.getLib runtimeLibs;
 
   meta = {
     description = "ArtCraft ${name}: open-source native creative app written in Rust";
