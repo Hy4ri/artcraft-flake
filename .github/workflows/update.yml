@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
       issues: write
     outputs:
       fail_reason: ${{ steps.build_verify.outputs.fail_reason || steps.check.outputs.fail_reason }}
@@ -62,12 +63,16 @@ jobs:
 
       - name: Commit and push
         if: steps.check.outputs.update_needed == 'true' && steps.build_verify.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: update to ${{ steps.check.outputs.version }}" || exit 0
           git push
+          # GITHUB_TOKEN pushes do not trigger push workflows; dispatch CI explicitly.
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
 
       # ── Shared: auto-close the failure issue once we recover ─────
       # NOTE: not `if: success()` — a continue-on-error check failure still
