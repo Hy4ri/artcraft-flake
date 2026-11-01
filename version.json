@@ -8,10 +8,10 @@
   },
   "craft-anything": {
     "hashes": {
-      "aarch64-linux": "sha256-RgnxQsZx3gcY1/Wa3uoQiydph6ZDOpbpZZm8djPxQMo=",
-      "x86_64-linux": "sha256-SKI4qPVtVHgf5p2w1JqPq1ER1+ZtZpNebZBSC3WhFmE="
+      "aarch64-linux": "sha256-T4rCla8suRniZ5K35deuRXP4dIkuvznqvqAknGcHqcU=",
+      "x86_64-linux": "sha256-qmcMFmtTJl03pk7FRM98q+z5k4AsJ8RzN0b3sWwSyyE="
     },
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "deckcraft": {
     "hashes": {
