@@ -6,6 +6,13 @@
     },
     "version": "0.15.1"
   },
+  "craft-anything": {
+    "hashes": {
+      "aarch64-linux": "sha256-RgnxQsZx3gcY1/Wa3uoQiydph6ZDOpbpZZm8djPxQMo=",
+      "x86_64-linux": "sha256-SKI4qPVtVHgf5p2w1JqPq1ER1+ZtZpNebZBSC3WhFmE="
+    },
+    "version": "0.1.0"
+  },
   "deckcraft": {
     "hashes": {
       "aarch64-linux": "sha256-/yXQyEaLzdNbZSdgPz5XtHl0HMcN/9EmGsrIP7QdnwM=",
