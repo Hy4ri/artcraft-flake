@@ -83,6 +83,13 @@
     },
     "version": "0.16.0"
   },
+  "texturecraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-iAJNgWhYPCWp6Dqy1EFKewCrkwY6QrjIavhWaLPqZGo=",
+      "x86_64-linux": "sha256-mRkGixPYgNUS1qmVQzRGyfzLPgtEf9zix3FuE5PXz7I="
+    },
+    "version": "0.2.0"
+  },
   "vectorcraft": {
     "hashes": {
       "aarch64-linux": "sha256-bFVXKfzqqn/uPhvZrcNxXUBabUPR9vA2zODSDxCq0/8=",
