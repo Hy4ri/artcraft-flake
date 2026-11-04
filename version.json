@@ -22,10 +22,10 @@
   },
   "designcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-G7GD8uOjsqB0j6ZX8Wd8gphqdmZpN51PMjncPJjiqQU=",
-      "x86_64-linux": "sha256-u2+c7EBGVTUCZumO4Q2bWhVFB+2ZitevR7JTNa+tGHI="
+      "aarch64-linux": "sha256-KeaB9g+FMduOIKORAqQctN2ukjQ8x9GkyCMIGYURWO0=",
+      "x86_64-linux": "sha256-o9cXIQJaGx7HLz3c70CQT22+TYJQNYbQNGXMWvH8uYY="
     },
-    "version": "0.17.0"
+    "version": "0.17.1"
   },
   "effectcraft": {
     "hashes": {
@@ -85,10 +85,10 @@
   },
   "texturecraft": {
     "hashes": {
-      "aarch64-linux": "sha256-l8IlIPdgpTKS1PDChSWfSaBCqfvWQv4QD6+pg8QTZlY=",
-      "x86_64-linux": "sha256-xVN9KRCvjdeUEMf2r82cKGX3KjJSFUwuEqYTrMYLxj0="
+      "aarch64-linux": "sha256-gSZ2RZ8R/fw4ob1tf07AchdoqEQ9WB2UeCswKJjmB8w=",
+      "x86_64-linux": "sha256-f8/2Sm2P4+TBLKJVbulrBypALyJCSP6v4w4ryPJ19Xw="
     },
-    "version": "0.3.0"
+    "version": "0.3.1"
   },
   "vectorcraft": {
     "hashes": {
