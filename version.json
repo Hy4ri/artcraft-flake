@@ -1,107 +1,107 @@
 {
   "cadcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-SnpPZ9dzRmTxV3ILHXxo43+4oYqWUJx8YgyrWaN3U1Y=",
-      "x86_64-linux": "sha256-3aFlovLubh70nHzAJXteA4LetUHY6uAhExdogvny7AA="
+      "aarch64-linux": "sha256-QhjyyMZjr08W2Hy+/3Qb2Xk27BfLEVB6QH6LY7TWzsc=",
+      "x86_64-linux": "sha256-DVtSKvz6IMfliIfCCS+1rVMi65DB2pgGHmG346zRvtU="
     },
-    "version": "0.17.1"
+    "version": "0.18.0"
   },
   "craft-anything": {
     "hashes": {
-      "aarch64-linux": "sha256-PqRjZoeZFNBDMNxad5+b+o4c+kRqofOjWrlNpub3lXg=",
-      "x86_64-linux": "sha256-KNnr/7l26kRp+1QCJ0LbWfTZ9iPRgHE2n/TYAcSbi8A="
+      "aarch64-linux": "sha256-X7v43kaensBzVcWlaGQSrEd17TQaTyoJ1/9h/1PBWAU=",
+      "x86_64-linux": "sha256-0YxU7wXlx+9Q+MSVn+6Jg8CkofFB7cSI0R9wKZc8iFs="
     },
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "deckcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-0SBSBbbcvJl56NoSdZQcsIuU3FGSC+wfuYa7+ZJjvN8=",
-      "x86_64-linux": "sha256-4tRRKdSw9dKCIyRVtzs10twWpPWHv2mh24CTmwreeM0="
+      "aarch64-linux": "sha256-glj8oNflZH0izOeaG+bKy5whQm+waBK5Cok3Uv7aFkc=",
+      "x86_64-linux": "sha256-7tVysvYjldD1z+JGpygYllHpXk7N9MPgrYe3ejgx4IY="
     },
-    "version": "0.15.1"
+    "version": "0.16.0"
   },
   "designcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-MmtJPmgFOEI/5i/P0bdJFcNtavqW+1ALEIM1p0A7ODw=",
-      "x86_64-linux": "sha256-uS6QZ9sRuN4bs0gjLAlV0yRpNm+jlS1d2WwYyhgKKM4="
+      "aarch64-linux": "sha256-8cDm4vfsubpkaOHTrMMv0xl+WkS15QGOMRjfKdUhAYo=",
+      "x86_64-linux": "sha256-U5h8tmvn3pOFTtVwAEJ/vhwHKgQnvIy69QH/NnLVQyw="
     },
-    "version": "0.17.2"
+    "version": "0.18.0"
   },
   "effectcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-d6kQIO/1JGF/ydtLdEPI/CL3h09LDIW3SxX6DuvIJf4=",
-      "x86_64-linux": "sha256-7DmvpR+wosC1iowRAjJeI1UBb+dUVj0kB1+imz4cUxU="
+      "aarch64-linux": "sha256-s88oEL+6zwZtXhzVIkMo0KA1QuBIPA1mMkJec+s0C6c=",
+      "x86_64-linux": "sha256-X+mwrldGrCm2H33qEL1ntx6ZbB4BiIJMT4GpZiPDvuk="
     },
-    "version": "0.21.1"
+    "version": "0.22.0"
   },
   "figcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-y64KODCdHAq1C+eKN8DJLIVVRBAROhAkfTmYo2EUEVw=",
-      "x86_64-linux": "sha256-1Xde+tyLtnOgt0HM2iicHr7Kb7P4J4laQM1X/wnEdNE="
+      "aarch64-linux": "sha256-RCOTdwvj62RY5nEqMySW/PNysQex7+Ngd7o5+juekMo=",
+      "x86_64-linux": "sha256-1ef5n0nTpwPX9SQYVNx1b7PVX8lNDJXSlw24SjM5H1o="
     },
-    "version": "0.15.1"
+    "version": "0.16.0"
   },
   "filmcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-Il1tgV+tjN+3ILXOOCGWtg7dbuEKkhZmC82rsovqqpU=",
-      "x86_64-linux": "sha256-OXrp/s5VmzeGO0sHavRqY7bkOHw194Fwnk760U/nHr4="
+      "aarch64-linux": "sha256-ybuN2/dkrFg83Kz2haV45iG1jCHQAak7lBpuglcILqs=",
+      "x86_64-linux": "sha256-AXnwWyDbhVv9Pe+RNs5g3uWfItLcv88j5KYlbgwVOwU="
     },
-    "version": "0.17.1"
+    "version": "0.18.0"
   },
   "gridcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-9YD1wiQG43gfnawPa+Hgjeam5uWQRqksm+vh/IpPvYE=",
-      "x86_64-linux": "sha256-Qp4DNM3TDtdev/WUU6ZEEUw8t+M0eZGoGzIEHXX0H+Q="
+      "aarch64-linux": "sha256-4FMcRbGbi/kkk6vBzsscSF/T5ygR6wioHlvg5fhgQUA=",
+      "x86_64-linux": "sha256-FOk3RVW8bS2cW8QbsxFQvGoctrToPVq0Fj/V12EbBhg="
     },
-    "version": "0.16.1"
+    "version": "0.17.0"
   },
   "lightcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-n9tmG2TYRJsPmLFndoPrSzMEmJZIi/0nPBVAbOrRFlc=",
-      "x86_64-linux": "sha256-B4+OT+9sqIr6JXpwIoYwsU4hOAzqWAMfu1xaGUK0BvA="
+      "aarch64-linux": "sha256-UwZQK0+1g1+hZ8/EIRPdaBYUnCR6q7W8Bt+HcVuUgt8=",
+      "x86_64-linux": "sha256-lIXWS9vpjG2vutDqeqwPpJQw0KAIuaZrpD3+d7dVUok="
     },
-    "version": "0.18.1"
+    "version": "0.19.0"
   },
   "pdfcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-asD2OjuM5CIEYFPmAeRL5idtjlV2oITAxwmw46P2XrY=",
-      "x86_64-linux": "sha256-MjutezczkgdkYeLK1dtjsi9HoDK6AFpsSjXzSD0F2uQ="
+      "aarch64-linux": "sha256-u373d/PLiHT2Aoo1lCpgk64KMOsAm1xuXuEkeEY4nxE=",
+      "x86_64-linux": "sha256-NleqQP4UbUr0D6sFB8l/buLGzlupk4VnGUQ5vjM1uos="
     },
-    "version": "0.18.2"
+    "version": "0.19.0"
   },
   "photocraft": {
     "hashes": {
-      "aarch64-linux": "sha256-ocN2HRMtnsFiaR1Q8G7ZhHO83ArtfBcaCX35rc/DgHI=",
-      "x86_64-linux": "sha256-CeAT1o2DE+sLHNbyRhL1tf0NmT//46fBLOzf5c0TGkY="
+      "aarch64-linux": "sha256-dI3OAlwUsLwWLtrms4tftVL40khBdUT8w6xD1l1tXLk=",
+      "x86_64-linux": "sha256-MRXlbMZG2601QeObYyO4okMY/uYZTXhN320GX3tdLTc="
     },
-    "version": "0.20.2"
+    "version": "0.21.0"
   },
   "soundcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-wKA/LCzOngBjcCtEhnxz6v3UVZbKqr2OLQiZ8XmE66I=",
-      "x86_64-linux": "sha256-56wUC7n9aa3k3QJkOvjl1MFKXILNZwsgMOUmiP67PLQ="
+      "aarch64-linux": "sha256-fXdJtWWucqe+OmdURW4dl5sdBUb3GLR2yCbhy8RJEC8=",
+      "x86_64-linux": "sha256-M40f5yuWkqXZn/Q1UD31jIU/W5bC6VsoIdiD8x+LWmY="
     },
-    "version": "0.17.1"
+    "version": "0.18.0"
   },
   "texturecraft": {
     "hashes": {
-      "aarch64-linux": "sha256-+mrN/ZkmQlquMwNg1g9E73GdEVfdRTCxO+H5FW5zkoM=",
-      "x86_64-linux": "sha256-T4/rxK9ZPe4brLUSk6788QLXqJgTbTzMxE9a1MGbwNA="
+      "aarch64-linux": "sha256-dQs5VBYeh/H4Jrbjf/AAiaN1g6Y0K86EUXjOyUlp8L0=",
+      "x86_64-linux": "sha256-7YR2nrutIjFma9AA386KN5HysQd2b11WilVF1d4IRM8="
     },
-    "version": "0.3.2"
+    "version": "0.4.0"
   },
   "vectorcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-Lm8wJoVrD5YJrLFSm7E43Np77i40ooXgZUmTdpasNgQ=",
-      "x86_64-linux": "sha256-ODu6BvvefLh8fhN5N61RappYVJHFqSfYYx7lS78dTpM="
+      "aarch64-linux": "sha256-51cr9wtiYv2+KebbBsZ6dmWxK2xGaGkDX9mvrT7smpc=",
+      "x86_64-linux": "sha256-boEqksrsTboj/XRzT6IKMniG7yBCe1Xy+If+kzSgkz8="
     },
-    "version": "0.21.1"
+    "version": "0.22.0"
   },
   "wordcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-ZF6NqkeFw+aL/t50D1UHXqYNRcn0KLJsl0HoGQgsCxs=",
-      "x86_64-linux": "sha256-Nm5U4jW0Yxd5wMeMB3eogN5REWPekTCreM5ZWD96C5o="
+      "aarch64-linux": "sha256-Bly0QMCW0JnYTLv4bwveJu8qKcRYAQViXQs7KOlAlRA=",
+      "x86_64-linux": "sha256-MluX8Vu/UyYooxdqnBcUinF18+Txm5MT3jI6tRNgl1I="
     },
-    "version": "0.15.2"
+    "version": "0.16.0"
   }
 }
