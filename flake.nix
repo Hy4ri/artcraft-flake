@@ -1,5 +1,5 @@
 {
-  description = "ArtCraft Crafting Apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft, CadCraft, DeckCraft, GridCraft, SoundCraft, WordCraft, FigCraft, Craft Anything, TextureCraft) — one flake, one overlay";
+  description = "ArtCraft Crafting Apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft, CadCraft, DeckCraft, GridCraft, SoundCraft, WordCraft, FigCraft, Craft Anything, TextureCraft, MaterialCraft) — one flake, one overlay";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
