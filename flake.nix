@@ -15,11 +15,38 @@
       appNames = builtins.attrNames versions;
 
       overlay = final: _prev:
-        nixpkgs.lib.genAttrs appNames (name:
-          final.callPackage ./package.nix { inherit name; info = versions.${name}; }
-        )
-        # Compatibility alias for the renamed PrintCraft app
-        // { printcraft = final.pdfcraft; };
+        let
+          baseApps = nixpkgs.lib.genAttrs appNames (name:
+            final.callPackage ./package.nix { inherit name; info = versions.${name}; }
+          );
+          ghidraHeadless = final.runCommand "ghidra-headless-compat" { } ''
+            mkdir -p $out/bin
+            ln -s ${final.ghidra}/lib/ghidra/support/analyzeHeadless $out/bin/analyzeHeadless
+          '';
+          craftAnythingFull = final.symlinkJoin {
+            name = "craft-anything-full-${versions.craft-anything.version}";
+            paths = [ baseApps.craft-anything ];
+            nativeBuildInputs = [ final.makeWrapper ];
+            postBuild = ''
+              wrapProgram $out/bin/craft-anything \
+                --prefix PATH : ${final.lib.makeBinPath [ ghidraHeadless ]}
+              wrapProgram $out/bin/craft-anything-cli \
+                --prefix PATH : ${final.lib.makeBinPath [ ghidraHeadless ]}
+            '';
+            passthru = (baseApps.craft-anything.passthru or { }) // {
+              unwrapped = baseApps.craft-anything;
+            };
+            meta = (baseApps.craft-anything.meta or { }) // {
+              description = "${baseApps.craft-anything.meta.description or "Craft Anything"} (bundled with Ghidra for Deep recreation mode)";
+            };
+          };
+        in
+        baseApps // {
+          # craft-anything bundled with Ghidra for Deep recreation mode
+          craft-anything-full = craftAnythingFull;
+          # Compatibility alias for the renamed PrintCraft app
+          printcraft = baseApps.pdfcraft;
+        };
     in
     {
       overlays.default = overlay;
@@ -30,6 +57,7 @@
           apps = nixpkgs.lib.genAttrs appNames (n: pkgs.${n});
         in
         apps // {
+          inherit (pkgs) craft-anything-full;
           # Default package builds and links all ArtCraft applications together
           default = pkgs.symlinkJoin {
             name = "artcraft-apps";
@@ -38,9 +66,13 @@
         });
 
       apps = forAllSystems (system:
-        nixpkgs.lib.genAttrs appNames (n: {
+        let
+          pkgs = import nixpkgs { inherit system; overlays = [ overlay ]; };
+          allAppNames = appNames ++ [ "craft-anything-full" ];
+        in
+        nixpkgs.lib.genAttrs allAppNames (n: {
           type = "app";
-          program = "${self.packages.${system}.${n}}/bin/${n}";
+          program = "${self.packages.${system}.${n}}/bin/${if n == "craft-anything-full" then "craft-anything" else n}";
         }));
     };
 }
