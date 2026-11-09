@@ -62,6 +62,13 @@
     },
     "version": "0.20.0"
   },
+  "materialcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-JkZ55KYmEqun8QJpn7Z2RsmTBgSSsvGP0/qoqjYY3VU=",
+      "x86_64-linux": "sha256-0UOdHwc+K6zY4YoSPXuMJMDEF0ORmzzK4yqTIYP3YoU="
+    },
+    "version": "0.3.0"
+  },
   "pdfcraft": {
     "hashes": {
       "aarch64-linux": "sha256-u373d/PLiHT2Aoo1lCpgk64KMOsAm1xuXuEkeEY4nxE=",
