@@ -29,10 +29,10 @@
   },
   "effectcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-smb0cTyPhg3SvIR5MEE8Ci+gf4LD83UqQMptDPAEZ7E=",
-      "x86_64-linux": "sha256-E9mrI7db57inF3XMlALg+DIoCxZhR0ZyglV+nGoh09I="
+      "aarch64-linux": "sha256-//jtdSuQ1jweSR9sxtJwD8cSL8FeH6tnQAAGUFK+8/4=",
+      "x86_64-linux": "sha256-ozDRQG/ecdB6xVrTf+gfXeN+x+p8p8O5+gKqzQRQLbE="
     },
-    "version": "0.23.0"
+    "version": "0.23.1"
   },
   "figcraft": {
     "hashes": {
