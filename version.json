@@ -1,4 +1,11 @@
 {
+  "anicraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-bq3Mwld4DKbiKe2oJuqK5EK2W/X+s/54ZtFe4MqW1qk=",
+      "x86_64-linux": "sha256-Xc74Vl5nvP2Bgw2cZdc04xcnqdxSUEB+A1OpU1p0Up8="
+    },
+    "version": "0.1.0"
+  },
   "cadcraft": {
     "hashes": {
       "aarch64-linux": "sha256-Z+rPskPpGmnfx7P3TqYPHmfl+8tIlBWRQ3dkmOUkv7M=",
