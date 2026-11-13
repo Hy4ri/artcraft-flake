@@ -54,7 +54,8 @@
       packages = forAllSystems (system:
         let
           pkgs = import nixpkgs { inherit system; overlays = [ overlay ]; };
-          apps = nixpkgs.lib.genAttrs appNames (n: pkgs.${n});
+          availApps = builtins.filter (n: builtins.hasAttr system versions.${n}.hashes) appNames;
+          apps = nixpkgs.lib.genAttrs availApps (n: pkgs.${n});
         in
         apps // {
           inherit (pkgs) craft-anything-full;
@@ -68,7 +69,8 @@
       apps = forAllSystems (system:
         let
           pkgs = import nixpkgs { inherit system; overlays = [ overlay ]; };
-          allAppNames = appNames ++ [ "craft-anything-full" ];
+          availApps = builtins.filter (n: builtins.hasAttr system versions.${n}.hashes) appNames;
+          allAppNames = availApps ++ [ "craft-anything-full" ];
         in
         nixpkgs.lib.genAttrs allAppNames (n: {
           type = "app";
