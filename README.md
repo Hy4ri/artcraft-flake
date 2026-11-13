@@ -26,6 +26,7 @@ The flake is updated automatically every day.
 | `soundcraft` | Audio workstation | Pro Tools |
 | `deckcraft` | Presentations | PowerPoint |
 | `cadcraft` | CAD and drafting | AutoCAD |
+| `solidcraft` | Parametric 3D CAD | Fusion 360 |
 | `gridcraft` | Spreadsheets | Excel |
 | `craft-anything` | Explore how software works and build your own version | |
 | `craft-anything-full` | `craft-anything` with Ghidra bundled for Deep recreation mode | |

@@ -7,12 +7,14 @@
 set -euo pipefail
 source "$(dirname "${BASH_SOURCE[0]}")/lib/network.sh"
 
-OWNER="storytold"
+DEFAULT_OWNER="storytold"
 CHANGED=""
 
 for app in $(jq -r 'keys[]' version.json); do
+  owner=$(jq -r --arg a "$app" --arg d "$DEFAULT_OWNER" '.[$a].owner // $d' version.json)
+  repo=$(jq -r --arg a "$app" '.[$a].repo // $a' version.json)
   latest=""
-  if ! latest=$(fetch_gh_api "repos/$OWNER/$app/releases/latest" --jq '.tag_name | ltrimstr("v")'); then
+  if ! latest=$(fetch_gh_api "repos/$owner/$repo/releases/latest" --jq '.tag_name | ltrimstr("v")'); then
     die "Could not fetch latest $app version from GitHub API after 3 attempts. Last error: $(tail -n 1 "$ERR_LOG" 2>/dev/null || echo 'unknown')"
   fi
   [ -n "$latest" ] || die "GitHub API returned an empty version for $app."

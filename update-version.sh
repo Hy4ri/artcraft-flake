@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-OWNER="storytold"
+DEFAULT_OWNER="storytold"
 CURL=(curl -fsSL --connect-timeout 10 --max-time 120 --retry 3 --retry-delay 3 --retry-all-errors)
 declare -A ARCH=( [x86_64-linux]=x86_64 [aarch64-linux]=aarch64 )
 
@@ -18,19 +18,21 @@ trap 'rm -f "$tmp"' EXIT
 cp version.json "$tmp"
 
 for app in $(jq -r 'keys[]' version.json); do
+  owner=$(jq -r --arg a "$app" --arg d "$DEFAULT_OWNER" '.[$a].owner // $d' "$tmp")
+  repo=$(jq -r --arg a "$app" '.[$a].repo // $a' "$tmp")
   # Get the latest release tag from GitHub API
-  tag=$("${CURL[@]}" "https://api.github.com/repos/$OWNER/$app/releases/latest" | jq -r '.tag_name')
+  tag=$("${CURL[@]}" "https://api.github.com/repos/$owner/$repo/releases/latest" | jq -r '.tag_name')
 
   [ -n "$tag" ] && [ "$tag" != null ] || { echo "Error: no release for $app" >&2; exit 1; }
 
   version="${tag#v}"
 
   # Fetch SHA256 hashes straight from the release assets
-  sums=$("${CURL[@]}" "https://github.com/$OWNER/$app/releases/download/$tag/SHA256SUMS.txt")
+  sums=$("${CURL[@]}" "https://github.com/$owner/$repo/releases/download/$tag/SHA256SUMS.txt" 2>/dev/null || "${CURL[@]}" "https://github.com/$owner/$repo/releases/download/$tag/SHA256SUMS")
 
   echo "Updating $app -> $version"
 
-  for sys in "${!ARCH[@]}"; do
+  for sys in $(jq -r --arg a "$app" '.[$a].hashes | keys[]' "$tmp"); do
     hex=$(awk -v f="$app-$version-linux-${ARCH[$sys]}.tar.gz" '$2==f {print $1}' <<<"$sums")
     [ -n "$hex" ] || { echo "Error: no checksum for $app $sys" >&2; exit 1; }
 

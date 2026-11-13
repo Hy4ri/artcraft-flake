@@ -11,6 +11,8 @@
 let
   system = stdenv.hostPlatform.system;
   arch = { x86_64-linux = "x86_64"; aarch64-linux = "aarch64"; }.${system};
+  owner = info.owner or "storytold";
+  repo = info.repo or name;
 
   # Dependencies needed at runtime by the pre-compiled binaries
   runtimeLibs = [ alsa-lib dbus libGL libxkbcommon libx11 libxcb libxcursor libxi vulkan-loader wayland ];
@@ -20,7 +22,7 @@ stdenv.mkDerivation {
   inherit (info) version;
 
   src = fetchurl {
-    url = "https://github.com/storytold/${name}/releases/download/v${info.version}/${name}-${info.version}-linux-${arch}.tar.gz";
+    url = "https://github.com/${owner}/${repo}/releases/download/v${info.version}/${name}-${info.version}-linux-${arch}.tar.gz";
     hash = info.hashes.${system};
   };
 
@@ -44,7 +46,11 @@ stdenv.mkDerivation {
 
   meta = {
     description = "ArtCraft ${name}: open-source native creative app written in Rust";
-    homepage = "https://getartcraft.com/apps/${name}";
+    homepage =
+      if owner == "storytold" then
+        "https://getartcraft.com/apps/${name}"
+      else
+        "https://github.com/${owner}/${repo}";
     license = with lib.licenses; [ asl20 mit ];
     platforms = [ "x86_64-linux" "aarch64-linux" ];
     mainProgram = name;
