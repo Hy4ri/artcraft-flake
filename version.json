@@ -6,6 +6,15 @@
     },
     "version": "0.2.1"
   },
+  "bimcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-qU1ZjYIbHaM2bmZVFH0xiZGlpULCmNomPx+5fMcE1ME=",
+      "x86_64-linux": "sha256-kyp8bBa8Myi1CLcj9mR2CBS7I+A2A/BaRtpo7u8eI0E="
+    },
+    "owner": "IPedrax",
+    "repo": "BIMCraft",
+    "version": "0.11.0"
+  },
   "cadcraft": {
     "hashes": {
       "aarch64-linux": "sha256-sUnbS99h0TX8tAznNhgox1sY1vP3EOFlyhfzCBnSMhI=",
