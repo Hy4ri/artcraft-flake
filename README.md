@@ -26,12 +26,9 @@ The flake is updated automatically every day.
 | `soundcraft` | Audio workstation | Pro Tools |
 | `deckcraft` | Presentations | PowerPoint |
 | `cadcraft` | CAD and drafting | AutoCAD |
-<<<<<<< HEAD
 | `solidcraft` | Parametric 3D CAD | Fusion 360 |
 | `fieldcraft` | FEA, CFD, and heat transfer | |
 | `mailcraft` | Mail, calendar, and contacts | Outlook |
-=======
->>>>>>> 3f5d938 (feat: add bimcraft (v0.11.0))
 | `bimcraft` | BIM and architectural modeling | Revit |
 | `gridcraft` | Spreadsheets | Excel |
 | `craft-anything` | Explore how software works and build your own version | |
