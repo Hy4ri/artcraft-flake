@@ -28,6 +28,8 @@ The flake is updated automatically every day.
 | `cadcraft` | CAD and drafting | AutoCAD |
 | `solidcraft` | Parametric 3D CAD | Fusion 360 |
 | `fieldcraft` | FEA, CFD, and heat transfer | |
+| `mailcraft` | Mail, calendar, and contacts | Outlook |
+| `bimcraft` | BIM and architectural modeling | Revit |
 | `gridcraft` | Spreadsheets | Excel |
 | `craft-anything` | Explore how software works and build your own version | |
 | `craft-anything-full` | `craft-anything` with Ghidra bundled for Deep recreation mode | |

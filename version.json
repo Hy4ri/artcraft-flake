@@ -76,6 +76,14 @@
     },
     "version": "0.21.1"
   },
+  "mailcraft": {
+    "hashes": {
+      "aarch64-linux": "sha256-WJyZDCX0mPHP3h1Ad8YM0R0JwOkfrDqpmtZt8tfxeuQ=",
+      "x86_64-linux": "sha256-f8QdpL9aFuTkU16eNP4eLfB1xD4J6V3t+gNXCqyPtpI="
+    },
+    "owner": "UCS-Care-Group",
+    "version": "0.12.0"
+  },
   "materialcraft": {
     "hashes": {
       "aarch64-linux": "sha256-Q6N7akhN398FnJB/Pv9VPyDaJN0szUpaCI9dXLOLRBU=",
