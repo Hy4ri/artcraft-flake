@@ -116,11 +116,11 @@
   },
   "solidcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-A25AiY+1d2JCN/LP+ziwEXV3lPB3tBEr7jfLoOy3JPQ=",
-      "x86_64-linux": "sha256-5ZfkyxviTrFDM79Lj1SAf0JEPRdR48uiY64uaoEM8HA="
+      "aarch64-linux": "sha256-TCblkd8wPIM5qI2qlYNq04Bys4BikPCoTV5ncSrRxjQ=",
+      "x86_64-linux": "sha256-XAVGPI6iR6SSabpjoMI6PWy6TReucTxlXS+Uhy/EQks="
     },
     "owner": "tangency-labs",
-    "version": "0.41.0"
+    "version": "0.42.0"
   },
   "soundcraft": {
     "hashes": {
