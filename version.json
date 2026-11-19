@@ -52,10 +52,10 @@
   },
   "fieldcraft": {
     "hashes": {
-      "x86_64-linux": "sha256-8HuVfnnCLtK+uu34g/UAhe8qqB1HfXz2u4OdqUxyZT4="
+      "x86_64-linux": "sha256-0DHBapu51p6kV11JP3eQIKnepoawrUY/B90rf7rrLfE="
     },
     "owner": "tangency-labs",
-    "version": "0.7.5"
+    "version": "0.8.0"
   },
   "figcraft": {
     "hashes": {
