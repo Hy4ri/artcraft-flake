@@ -52,10 +52,10 @@
   },
   "fieldcraft": {
     "hashes": {
-      "x86_64-linux": "sha256-0DHBapu51p6kV11JP3eQIKnepoawrUY/B90rf7rrLfE="
+      "x86_64-linux": "sha256-mHvmTtlvFo1uciSos93KwCqjwX9Ej2SQyIs4aDeOFwg="
     },
     "owner": "tangency-labs",
-    "version": "0.8.0"
+    "version": "0.8.1"
   },
   "figcraft": {
     "hashes": {
@@ -87,11 +87,11 @@
   },
   "mailcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-WhTFXxmbFQJZNPjnkzB5WQN84qqOZZjpCBzv7Vjs00A=",
-      "x86_64-linux": "sha256-j0+a6nFxK5ZKCAMdYTi8KilaJaeGFPH//KV6aXhN/Gk="
+      "aarch64-linux": "sha256-R/dPe/mJWPtlf7ym9pXbd4GzO9dQy8Ccz6NpyMSBW3Q=",
+      "x86_64-linux": "sha256-1npb7u3CTP4HyPgYRzWBDF4tPlZRGBIUSK7GHkABLxA="
     },
     "owner": "UCS-Care-Group",
-    "version": "0.13.0"
+    "version": "0.14.0"
   },
   "materialcraft": {
     "hashes": {
