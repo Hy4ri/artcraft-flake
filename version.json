@@ -87,11 +87,11 @@
   },
   "mailcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-R/dPe/mJWPtlf7ym9pXbd4GzO9dQy8Ccz6NpyMSBW3Q=",
-      "x86_64-linux": "sha256-1npb7u3CTP4HyPgYRzWBDF4tPlZRGBIUSK7GHkABLxA="
+      "aarch64-linux": "sha256-Gwv42a746SRguD5G5dvTn/iu200YoszVg/C9meYHlBM=",
+      "x86_64-linux": "sha256-2fkyHW3+Y2+3rQdYUXMRpBbokG03DU+73vsM0mj9UIE="
     },
     "owner": "UCS-Care-Group",
-    "version": "0.14.0"
+    "version": "0.15.0"
   },
   "materialcraft": {
     "hashes": {
