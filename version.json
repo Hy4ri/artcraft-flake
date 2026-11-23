@@ -38,17 +38,17 @@
   },
   "designcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-IIw89zVl+nZcR+62AflP7EJegX0VzCEx36HB6+LQZiA=",
-      "x86_64-linux": "sha256-6RYw1M31eMyx4vOfiOJOhSDxSC1RrkcUZX7kceIjf0Q="
+      "aarch64-linux": "sha256-CszzA9olsOGtKwCk2BLekgekX+wjbBlCHZpATJ0pHdY=",
+      "x86_64-linux": "sha256-IR50ufXO5b/DzbRpg9C9sf29CRZL/YB/T/cHBpNdQK4="
     },
-    "version": "0.20.1"
+    "version": "0.21.1"
   },
   "effectcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-rRDERQZWgXYN6TUxF8bixFFn6rzM8O0ZveL1xayQhpU=",
-      "x86_64-linux": "sha256-XOA5NpAUQif6kYboIwitY4pu9tn5dsmW5tA7W1G2Wns="
+      "aarch64-linux": "sha256-pKlsjbdwMKsrLCQYNhrr70TtspeUtcBks7jIEenqpSM=",
+      "x86_64-linux": "sha256-byn/fgNZkJ/h2/b9PP2EMKA2I0m2EsXrLPyP7nueJ2A="
     },
-    "version": "0.24.1"
+    "version": "0.25.1"
   },
   "fieldcraft": {
     "hashes": {
