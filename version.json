@@ -31,10 +31,10 @@
   },
   "deckcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-P70AXOOCyFOtBW3Ke5N4AvwO9rhWTspamaUrZwwVnpQ=",
-      "x86_64-linux": "sha256-W659VWZjhiRBHvlo8lMqszWNwoCIQURYPkl8VjHbiiY="
+      "aarch64-linux": "sha256-IOuNgoR+GonPwm61uATIQG5m4MZOK/xgEjb0rQRvayE=",
+      "x86_64-linux": "sha256-7HWqrvEKbcSBP36/D3/Y+YBSDFs9BRuj12IEyeXXb+o="
     },
-    "version": "0.18.1"
+    "version": "0.19.1"
   },
   "designcraft": {
     "hashes": {
@@ -116,11 +116,11 @@
   },
   "solidcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-2oZRjstT9cHLw9BEPmEsqqCWm03BQdgilMqR1eO7+XI=",
-      "x86_64-linux": "sha256-FQLJj6VURX/JGd+2ypSgtXDQycC9Gii682/JGt7MJJc="
+      "aarch64-linux": "sha256-I3WV6XM+4QD4PAVabMziBEUU4U1XRoU2T7fSvKsl1Tg=",
+      "x86_64-linux": "sha256-Gpm+aEtbhu+jGzwmcYcrZmtedV3BhIS8tSVgCg/1nao="
     },
     "owner": "tangency-labs",
-    "version": "0.49.0"
+    "version": "0.49.1"
   },
   "soundcraft": {
     "hashes": {
@@ -145,9 +145,9 @@
   },
   "wordcraft": {
     "hashes": {
-      "aarch64-linux": "sha256-P0r8BZg1c3itivmy43osFx9t1HTJIGyc8M9W6mhiWe0=",
-      "x86_64-linux": "sha256-MSoFfUbdgFl8EtzP0Ql84l7epAuqrrULy28BrBrrrbU="
+      "aarch64-linux": "sha256-Y9iy4CDSQQALVls4bNBbuiLQuXxIS18RwJzGMeUXSco=",
+      "x86_64-linux": "sha256-7I2MwrkgSsA9E4DOyRDe/fLohQ2T6bh9YYTq/vYZaLQ="
     },
-    "version": "0.18.1"
+    "version": "0.19.1"
   }
 }
